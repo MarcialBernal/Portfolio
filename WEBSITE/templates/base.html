@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcial Bernal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+</head>
+<body>
+
+  <div class="overlay-image">
+    <img src="{{ url_for('static', filename='images/imagentraslucida.jpeg') }}">
+  </div>
+
+  <div class="overlay-right"></div>
+
+  <div class="overlay-gradient"></div>
+
+  <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutme">ABOUT ME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills">SKILLS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">PROJECTS</a>
+      </li>
+    </ul>
+
+    <div class="block-content">
+      {%block content%} 
+      {% endblock %}
+
+    </div>
+
+</body>
+</html>

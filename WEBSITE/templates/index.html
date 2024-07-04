@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}
+Título de la página de inicio
+{% endblock %}
+
+{% block content %}
+
+<div class="block-content">
+    <div id="home">
+        <!-- Contenido específico de la página de inicio -->
+
+        <div class="outer-headings">
+            <h1>
+              Marcial Bernal,
+              <div class="inner-headings">
+                <span>
+                  Python <br />
+                  Artificial Intelligence <br />
+                  Data Science <br />
+                  Mexico <br />
+                </span>
+              </div>
+            </h1>
+          </div>
+
+    </div>
+
+    <div id="aboutme">
+
+        <div>
+            <h1>About Me</h1>
+        </div>
+
+        <div class="content">
+            <div class="text-container">
+                <img src="{{ url_for('static', filename='images/Foto Perfil.jpg') }}" alt="Foto de Perfil">
+                <figcaption></figcaption>
+            </div>
+            <div>
+                <p>
+                    Hi! I'm <strong>Marcial Alejandro Bernal Arredondo</strong>, a versatile and communicative professional
+                    with a diverse skill set ranging from machine learning and programming to culinary arts.
+                    With a solid foundation in data science and hands-on experience in various technical and customer-facing roles,
+                    I am eager to leverage my skills in a dynamic and challenging environment.
+                    Whether it's coding, problem-solving, or creating delicious dishes,
+                    I thrive on learning and adapting to new situations.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <div id="portfolio">
+        <!-- Contenido específico de la página de inicio -->
+        <h1>Portfolio</h1>
+        <ul>
+            <li><strong>Machine Learning Projects:</strong> <br>
+                 <span>Implemented various machine learning models for data classification, regression, and clustering using Python libraries such as Scikit-learn, NumPy, and Pandas.</span> </li>
+                 <br>
+            <li><strong>SQL Database Management: </strong> <br>
+                 <span>Designed and managed databases, including creating tables, stored procedures, and triggers to ensure efficient data handling and manipulation.</span> </li>
+                 <br>
+            <li><strong>Data Visualization: </strong> <br>
+                 <span>Developed insightful data visualizations using Matplotlib and Power BI to aid in decision-making processes.</span> </li>
+                 <br>
+            <li><strong>Technical Support: </strong> <br>
+                 <span>Provided IT support, including server maintenance and hardware installations, ensuring smooth and secure operations.</span> </li>
+            
+        </ul>
+        
+        <p>
+            Download CV ... >>> <a href="{{ url_for('download_cv') }}" download="CV.pdf">Marcial Bernal CV</a>        
+        </p>
+
+    </div>
+
+    <div id="skills">
+        <h1>Skills</h1>
+
+        <ul>
+            <li><strong>Programming Languages & Tools:</strong> <br>
+               <span>Python, SQL, NumPy, Pandas, Matplotlib</span></li> <br>
+            <br>
+            <li><strong>Data Science & Machine Learning:</strong> <br>
+               <span>Feature selection, data visualization, model evaluation, regression, clustering, neural networks</span></li> <br>
+            <br>
+            <li><strong>Technical Proficiency:</strong> <br>
+               <span>Server maintenance, hardware installation, software troubleshooting</span></li> <br>
+            <br>
+            <li><strong>Other Skills:</strong> <br>
+               <span>Clear and effective communication, teamwork, problem-solving, Adobe InDesign</span></li> <br>
+            <br>
+            <li><strong>Languages:</strong> <br> 
+               <span>Spanish (native), English (intermediate)</span></li>
+        </ul> 
+
+    </div>
+
+    <div id="projects">
+        <!-- Contenido específico de la página de inicio -->
+        <h1>Projects</h1>
+        <p>
+            Customer Rental Management System: Developed a comprehensive system to manage the rental of construction machinery, including client acquisition and customer service modules.
+Data Analysis with Pandas: Conducted extensive data analysis using Pandas to derive meaningful insights and improve business strategies.
+Neural Network Implementation: Created a neural network model to predict and classify data patterns, enhancing predictive analytics capabilities.
+Visualization Dashboard with Power BI: Designed an interactive dashboard to visualize key business metrics, enabling better data-driven decisions.
+Technical Support and Maintenance: Managed server and hardware installations, ensuring optimal performance and security across the organization's IT infrastructure.
+        </p>
+    </div>
+</div>
+{% endblock %}
