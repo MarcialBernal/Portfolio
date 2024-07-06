@@ -8,6 +8,7 @@ load_dotenv()
 class Config:
     SECRET_KEY = os.getenv('SECRET_KEY')
     DEBUG = False
+    TESTING = False
 
 
 class DevelopmentConfig(Config):
@@ -16,3 +17,4 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     DEBUG = False
+    
