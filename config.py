@@ -1,5 +1,4 @@
 from dotenv import load_dotenv
-import os
 
 ####################    ####################  
 
@@ -7,17 +6,15 @@ load_dotenv()
 
 
 class Config:
-    DEBUG = False
-    TESTING = False
-    FLASK_ENV = os.getenv('FLASK_ENV')
+    pass
 
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    
-
+    FLASK_ENV = "development"
 
 class ProductionConfig(Config):
     DEBUG = False
+    FLASK_ENV = "production"
     
     

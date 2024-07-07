@@ -11,10 +11,11 @@ app = Flask(__name__)
 
 if os.getenv("FLASK_ENV") == "production":
     app.config.from_object(ProductionConfig)
-else:
+    
+elif os.getenv("FLASK_ENV") == "development":
     app.config.from_object(DevelopmentConfig)
     
 
-print(f"Flask running in {app.config['FLASK_ENV']} mode")
+#print(f"Flask running in {app.config['FLASK_ENV']} mode")
 
 from WEBSITE import routes
