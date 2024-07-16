@@ -1,3 +1,2 @@
 .env
-DEEP-LEARNING_deployment/tf1x/
-DEEP-LEARNING_deployment/tf2x/
+FLOWER_CLASS/model/flower_classifier_model.h5
