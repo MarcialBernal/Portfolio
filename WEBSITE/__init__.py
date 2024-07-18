@@ -15,7 +15,7 @@ if os.getenv("FLASK_ENV") == "production":
 elif os.getenv("FLASK_ENV") == "development":
     app.config.from_object(DevelopmentConfig)
     
-
-#print(f"Flask running in {app.config['FLASK_ENV']} mode")
+    
+####################    ####################  
 
 from WEBSITE import routes
