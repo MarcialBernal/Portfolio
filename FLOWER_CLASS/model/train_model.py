@@ -1,7 +1,7 @@
 import tensorflow as tf
 import tensorflow_datasets as tfds
 from tensorflow.keras import layers, models
-import numpy as np
+import joblib
 
 # Cargar el dataset
 dataset, info = tfds.load('tf_flowers', with_info=True, as_supervised=True)
@@ -43,4 +43,4 @@ model.compile(optimizer='adam',
 history = model.fit(train_dataset, epochs=10, validation_data=test_dataset)
 
 # Guardar el modelo entrenado
-model.save('flower_classifier_model.h5')
+joblib.dump(model, 'C:\\Users\\Marcial\\Desktop\\DEV\\PORTFOLIO\\FLOWER_CLASS\\model\\flower_classifier_model.joblib')

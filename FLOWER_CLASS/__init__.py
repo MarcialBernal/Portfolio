@@ -3,6 +3,7 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
+import joblib
 from FLOWER_CLASS import app
 
 ###########################      #################################
@@ -15,8 +16,8 @@ flower_pred = Blueprint('flower_pred', __name__, static_folder="static", templat
 
 ###########################      #################################
 
-model_path = 'model/flower_classifier_model.h5'
-model = load_model(model_path)
+model_path = 'C:\\Users\\Marcial\\Desktop\\DEV\\PORTFOLIO\\FLOWER_CLASS\\model\\flower_classifier_model.joblib'
+model = joblib.load(model_path)
 
 ###########################      #################################
 
@@ -30,7 +31,6 @@ def predict_flower(img_path):
     return flower_dict[np.argmax(predictions)]
 
 ###########################      #################################
-
 
 
 ###########################      #################################
