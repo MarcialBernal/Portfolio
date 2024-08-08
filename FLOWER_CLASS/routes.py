@@ -1,8 +1,8 @@
-from FLOWER_CLASS import app, predict_flower
+from FLOWER_CLASS import flower_pred, predict_flower
 from flask import render_template, request
 import os
 
-@app.route('/pred', methods=['GET', 'POST'])
+@flower_pred.route('/pred', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         if 'file' not in request.files:
