@@ -1,6 +1,8 @@
-from FLOWER_CLASS import flower_pred, predict_flower
-from flask import render_template, request
+from flask import render_template, request, Blueprint
+from FLOWER_CLASS.utils import predict_flower
 import os
+
+flower_pred = Blueprint('flower_pred', __name__, static_folder="static", template_folder="templates", url_prefix='/flowers')
 
 @flower_pred.route('/pred', methods=['GET', 'POST'])
 def index():

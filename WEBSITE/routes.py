@@ -1,4 +1,3 @@
-
 from WEBSITE import app
 from flask import render_template, send_from_directory
 
