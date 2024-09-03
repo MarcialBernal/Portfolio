@@ -1,12 +1,9 @@
 from flask import Flask
-
 from WEBSITE import app
-from FLOWER_CLASS.routes import flower_pred
+from FLOWER_CLASS.routes import flower_bp
 
 
-def create_app():
-    app = Flask(__name__)
-    
-    app.register_blueprint(flower_pred)
+app.register_blueprint(flower_bp)
 
-    return app
+if __name__ == "__main__":
+    app.run()

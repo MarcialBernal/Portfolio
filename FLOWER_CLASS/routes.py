@@ -1,10 +1,11 @@
 from flask import render_template, request, Blueprint
-from FLOWER_CLASS.utils import predict_flower
+from .utils import predict_flower 
 import os
 
-flower_pred = Blueprint('flower_pred', __name__, static_folder="static", template_folder="templates", url_prefix='/flowers')
 
-@flower_pred.route('/pred', methods=['GET', 'POST'])
+flower_bp = Blueprint('flower_pred', __name__, static_folder="static", template_folder="templates", url_prefix='/flowers')
+
+@flower_bp.route('/pred', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         if 'file' not in request.files:

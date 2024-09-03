@@ -1,5 +1,11 @@
 from flask import Flask
-from FLOWER_CLASS import app
+
+
+app = Flask(__name__)
+
+from .routes import flower_bp
+
+app.register_blueprint(flower_bp)
 
 if __name__== '__main__':
-    app.run()
+    app.run(debug =True)

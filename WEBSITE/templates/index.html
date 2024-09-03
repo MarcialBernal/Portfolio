@@ -102,7 +102,12 @@ Título de la página de inicio
     <div id="projects">
         <!-- Contenido específico de la página de inicio -->
         <h1>Projects</h1>
-        <a href="/flowers/pred">Flower Prediction Model</a>
+        <a href="{{ url_for('flower_pred.index') }}">FLOWER PREDICTION APP</a>
+
+        <form action="{{ url_for('flower_pred.index') }}" method="post">
+   
+            <button type="submit">SUBMIT</button>
+        </form>
         
     </div>
 </div>
