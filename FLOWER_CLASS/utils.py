@@ -5,7 +5,7 @@ import joblib
 model_path = 'C:\\Users\\Marcial\\Desktop\\DEV\\PORTFOLIO\\FLOWER_CLASS\\model\\flower_classifier_model.joblib'
 model = joblib.load(model_path)
 
-flower_dict = {0: 'margarita', 1: 'diente de león', 2: 'rosa', 3: 'girasol', 4: 'tulipán'}
+flower_dict = {0: 'daisy', 1: 'dandelion', 2: 'rose', 3: 'sunflower', 4: 'tulip'}
 
 def predict_flower(img_path):
     img = image.load_img(img_path, target_size=(224, 224))

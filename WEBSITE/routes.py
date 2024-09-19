@@ -6,7 +6,7 @@ from flask import render_template, send_from_directory
 
 @app.route("/", methods=['GET'])
 def home():
-    return render_template("index.html")
+    return render_template("website/index.html")
 
 @app.route('/download_cv', methods=['GET'])
 def download_cv():
