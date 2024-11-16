@@ -20,7 +20,7 @@ from DJANGOWEB import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("greeting/", views.greeting, name= "home"),
+    path("home/", views.home, name= "home"),
     path("bye/", views.bye, name= "bye"),
     path("date/", views.date, name="today")
 ]

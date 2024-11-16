@@ -54,7 +54,7 @@ ROOT_URLCONF = 'DJANGOWEB.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["C:/Users/Marcial/Desktop/DEV/PORTFOLIO/DJANGOWEB/DJANGOWEB/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+<body>
+    <p>
+        This is the home
+    </p>
+    <h2>
+        This is the date: {{today_date}} <br>
+        Day: {{today_date.day}}
+    </h2>
+    <h1><strong>List of Colors</strong></h1>
+    <p>Showing the first element of list colors: {{colors.0}}</p>
+    <p>
+        <ul>
+            {% if colors%}
+
+            {% for i in colors %}
+            <li>{{ i }}</li>
+            {% endfor %}
+
+            {% else %}
+            <p>No colors to show</p>
+            {% endif %}
+        </ul>
+    </p>
+</body>
