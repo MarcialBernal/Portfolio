@@ -4,8 +4,8 @@ from django.db import models
 
 class Clients(models.Model):
     name = models.CharField(max_length=30)
-    adress = models.CharField(max_length=50)
-    email = models.EmailField()
+    adress = models.CharField(max_length=50, verbose_name="Adress Field")
+    email = models.EmailField(blank=True, null=True)
     telephone = models.CharField(max_length=10)
     
 class Items(models.Model):
