@@ -55,7 +55,7 @@ ROOT_URLCONF = 'ONLINESHOP.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["C:/Users/Marcial/Desktop/DEV/PORTFOLIO/ONLINESHOP/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
