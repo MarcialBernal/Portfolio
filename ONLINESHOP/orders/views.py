@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from orders.models import Items
+from django.core.mail import send_mail
+from django.conf import settings
 
 # Create your views here.
 
@@ -28,6 +30,12 @@ def search(request):
 def contact(request):
     
     if request.method == "POST":
+        
+        subject = request.POST["About"]
+        message = request.POST["Message"] + " " + request.POST["Email"]
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = ["marcialb9328@gmail.com"]
+        send_mail(subject, message, email_from, recipient_list)
         
         return render(request, "succes_contact.html")
         
