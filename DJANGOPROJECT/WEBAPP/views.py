@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from SERVICES.models import Service
 
 # Create your views here.
 
@@ -6,7 +7,9 @@ def home (request):
     return render(request, "home.html")
 
 def services (request):
-    return render(request, "services.html")
+    
+    services = Service.objects.all()
+    return render(request, "services.html", {"services":services})
 
 def shop (request):
     return render(request, "shop.html")
