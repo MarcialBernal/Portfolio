@@ -6,11 +6,6 @@ from SERVICES.models import Service
 def home (request):
     return render(request, "home.html")
 
-def services (request):
-    
-    services = Service.objects.all()
-    return render(request, "services.html", {"services":services})
-
 def shop (request):
     return render(request, "shop.html")
 
