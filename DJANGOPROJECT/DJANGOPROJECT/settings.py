@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "WEBAPP",
     "SERVICES",
     "BLOG",
+    "CONTACT",
 ]
 
 MIDDLEWARE = [
