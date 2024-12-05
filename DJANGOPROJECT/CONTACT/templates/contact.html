@@ -6,11 +6,18 @@
 
 
 <div class="contactForm">
-    <form action="" method="POST" style="text-align: center;"> {% csfr_token %}
+
+    {% if "valid" in request.GET %}
+
+    <p style="color: white">Email Sended</p>
+
+    {% endif %}
+
+    <form action="" method="POST" style="text-align: center;"> {% csrf_token %}
     <table style="color: white; margin: 20px auto;">{{contact_form.as_table}}</table>
     <input type="submit" value="Send" style= "width: 150px">
     </form>
-</div>
 
+</div>
 
 {% endblock %}   
