@@ -14,7 +14,7 @@ def contact (request):
             email = request.POST.get("email")
             message = request.POST.get("message")
             
-            email=EmailMessage(subject=subject, body= "{} \n {}".format(email, message), from_email= email, to= ["marcial9328@gmail.com"] )
+            email=EmailMessage(subject=subject, body= "{} \n {}".format(email, message), from_email= email, to= ["@gmail.com"] )
             
             try:
                 email.send()
