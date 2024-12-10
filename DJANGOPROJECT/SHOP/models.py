@@ -20,7 +20,12 @@ class Items(models.Model):
     image = models.ImageField(upload_to="shop", null=True, blank=True)
     price = models.FloatField()
     availability = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now_add=True)
     
     class Meta:
         verbose_name = "Item"
         verbose_name_plural = "Items"
+        
+    def __str__(self):
+        return self.name
