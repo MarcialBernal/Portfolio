@@ -4,8 +4,34 @@
 
 {% block content %}
 
+<div class="container">
 
-<h1>shop</h1>
+    <div class="row">
 
+        {% for item in items %} 
+        
+        <div class="col-md-3">
+
+            <div class="card" style="width: auto; margin: 10px">
+
+                <img src="{{item.image.url}}" class="card-img-top">
+
+                <div class="card-body" style="text-align: center;">
+
+                    <h6 class="card-title">{{item.name}}</h6>
+                    <p class="card-text">{{item.price}}&nbsp;$</p>
+                    <h6 class="card-title">{{item.category}}</h6>
+
+                </div>
+
+            </div>
+        
+        </div>
+                
+        {% endfor %}
+
+    </div>
+
+</div>
 
 {% endblock %}   
