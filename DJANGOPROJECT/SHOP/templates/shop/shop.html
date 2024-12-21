@@ -6,6 +6,10 @@
 
 <div class="container">
 
+    <div style="float: right;">
+        <p style="color: white;">Cart</p>
+    </div>
+
     <div class="row">
 
         {% for item in items %} 
@@ -21,6 +25,12 @@
                     <h6 class="card-title">{{item.name}}</h6>
                     <p class="card-text">{{item.price}}&nbsp;$</p>
                     <h6 class="card-title">{{item.category}}</h6>
+
+                </div>
+
+                <div class="card-footer text-center">
+
+                    <a href="#" class="btn btn-succes">Add to Cart</a>
 
                 </div>
 
