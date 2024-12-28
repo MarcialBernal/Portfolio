@@ -1,0 +1,56 @@
+<table class="table table-bordered" style="color: white;">
+
+    <thead>
+
+       <tr>
+
+        <th colspan="3" class="text-center">
+
+            Shop Cart
+
+        </th>
+
+       </tr>
+
+       <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+       </tr>
+
+    </thead>
+
+    <tbody>
+        {% if request.session.cart %}
+            {% for key, value in request.session.cart.items %}
+                <tr class="text-center">
+                    <td>{{value.name}}</td>
+                    <td>{{value.quantity}}</td>
+                    <td>
+                        <a href="{% url 'cart:add' value.item_id %}" class="btn btn-sm btn-success">+</a>
+                        <a href="{% url 'cart:substract' value.item_id %}" class="btn btn-sm btn-success">-</a><br>
+                        $ {{value.price}}
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="3">
+                    <div class="alert alert-danger text-center">
+                        No items in cart
+                    </div>
+
+                </td>
+            </tr>
+        {% endif %}
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                Total: ${{cart_total}}
+            </td>
+        </tr>
+    </tfoot>
+
+</table>

@@ -6,15 +6,15 @@ class Cart:
         if not cart:
             cart = self.session["cart"] = {}
             
-        else:
-            self.cart = cart
+        #else:
+        self.cart = cart
     ###
     def add(self, item):
-        if (str(item.id) not in self.cart.keys()):
+        if str(item.id) not in self.cart.keys():
             self.cart[item.id] = {
                 "item_id":item.id, 
                 "name":item.name, 
-                "price":str(item.price),
+                "price":float(item.price),
                 "quantity": 1,
                 "image":item.image.url
                 }
