@@ -22,7 +22,8 @@ class Cart:
         else:
             for key, value in self.cart.items():
                 if key == str(item.id):
-                    value["quantity"] = value["quantity"]+1
+                    value["quantity"] = value["quantity"]+ 1
+                    value["price"] = float(value["price"]) + item.price
                     break
                 
         self.save()
@@ -40,7 +41,8 @@ class Cart:
     def substract(self, item):
         for key, value in self.cart.items():
                 if key == str(item.id):
-                    value["quantity"] = value["quantity"]-1
+                    value["quantity"] = value["quantity"]- 1
+                    value["price"] = float(value["price"]) - item.price
                     if value["quantity"]<1:
                         self.delete(item)
                     break

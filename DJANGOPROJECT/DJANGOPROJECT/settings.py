@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "CONTACT",
     "SHOP",
     "CART",
+    "AUTH",
 ]
 
 MIDDLEWARE = [
