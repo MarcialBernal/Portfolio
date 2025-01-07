@@ -4,8 +4,12 @@
 
 {% block content %}
 
-<div>
-    <p style="color: white;"> Register Page</p>
-</div>
+<form method="post" style="color: white;">
+
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="btn btn-succes">Register</button>
+
+</form>
 
 {% endblock %}   
