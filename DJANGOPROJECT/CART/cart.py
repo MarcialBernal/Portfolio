@@ -1,12 +1,12 @@
 class Cart:
     def __init__(self, request):
-        self.request = request
+        """self.request = request
         self.session = request.session
         cart = self.session.get("cart")
         if not cart:
             cart = self.session["cart"] = {}
             
-        #else:
+        #else:"""
         self.cart = cart
     ###
     def add(self, item):
