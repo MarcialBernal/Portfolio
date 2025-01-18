@@ -44,8 +44,9 @@ def login_view(request):
                 return redirect("home")
             else:
                 messages.error(request, "User its not valid")
-    else:
-        messages.error(request, "Data its not valid")
-            
-    form = AuthenticationForm()
+        else:
+            messages.error(request, "Data its not valid")
+    else:        
+        form = AuthenticationForm()
+        
     return render(request, "login/login.html", {"form":form})

@@ -11,8 +11,20 @@
     {% csrf_token %}
 
     <div style="width: 50%; margin: auto;">
+
+            <br>
+            {% if messages %}
+
+                {% for msg in messages %}
+                <span class="alert alert-{{msg.tags}}"> {{msg}} </span>
+                {% endfor %}
+
+            {% endif %}
+            <br>
+    
         {{form|crispy}}
         <button type="submit" class="btn btn-success">Login</button>
+
     </div>
 
 </form>
