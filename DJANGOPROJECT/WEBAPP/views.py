@@ -1,13 +1,12 @@
 from django.shortcuts import render
-from SERVICES.models import Service
+from CART.cart import Cart
 
 # Create your views here.
 
 def home (request):
+    cart = Cart(request)
     return render(request, "home.html")
 
-def shop (request):
-    return render(request, "shop.html")
 
 
 
