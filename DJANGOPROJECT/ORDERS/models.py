@@ -30,13 +30,13 @@ class Orders (models.Model):
 #
 class OrdersLine (models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    item_id = models.ForeignKey(Items, on_delete=models.CASCADE)
-    order_id = models.ForeignKey(Orders, on_delete=models.CASCADE)
+    item = models.ForeignKey(Items, on_delete=models.CASCADE)
+    order = models.ForeignKey(Orders, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f"{self.quantity} units of {self.item_id}"
+        return f"{self.quantity} units of {self.item.name}"
     
     class Meta:
         db_table = "ordersline"
